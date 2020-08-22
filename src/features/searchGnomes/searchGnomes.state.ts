@@ -1,4 +1,4 @@
 export interface SearchGnomeState {
   isLoading: boolean;
-  gnomes?: [];
+  gnomes?: any[];
 }

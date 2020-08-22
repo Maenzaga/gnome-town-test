@@ -1,11 +1,7 @@
 import React from "react";
+import { getGnomes } from "../../features/searchGnomes";
 
 const GnomeView = () => {
-  return (
-    <div>
-      <h2>Name</h2>
-      <h3>Age</h3>
-    </div>
-  );
+  return <div></div>;
 };
 export default GnomeView;

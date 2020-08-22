@@ -5,12 +5,9 @@ class GnomeService {
     baseURL:
       "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json",
   });
-  searchGnomes = (query: string): Promise<AxiosResponse> => {
+  searchGnomes = (): Promise<AxiosResponse> => {
     return this.axios.get(
-      "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json",
-      {
-        params: { q: query },
-      }
+      "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
     );
   };
 }
