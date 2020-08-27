@@ -3,6 +3,7 @@ import { ThunkAction } from "redux-thunk";
 import { SearchGnomeState } from "./searchGnomes.state";
 import gnomeService from "../../api/GnomeService";
 import { AxiosResponse } from "axios";
+import { Gnome } from "../../types";
 
 export enum SearchGnomesActionTypes {
   SEARCH_GNOMES_REQUEST = "SEARCH_GNOMES_REQUEST",
@@ -16,7 +17,7 @@ export interface SearchGnomesRequest extends Action {
 
 export interface SearchGnomesSuccess extends Action {
   type: typeof SearchGnomesActionTypes.SEARCH_GNOMES_SUCCESS;
-  payload: { data: [] };
+  payload: { data: Gnome[] };
 }
 
 export interface SearchGnomesFail extends Action {
@@ -41,8 +42,6 @@ export const getGnomes = (): ThunkResult => {
     dispatch({ type: SearchGnomesActionTypes.SEARCH_GNOMES_REQUEST });
     return gnomeService.searchGnomes().then((response: AxiosResponse<any>) => {
       const responseData = response.data;
-      // console.log("Response", JSON.stringify(responseData));
-      console.log("Success");
       dispatch({
         type: SearchGnomesActionTypes.SEARCH_GNOMES_SUCCESS,
         payload: {

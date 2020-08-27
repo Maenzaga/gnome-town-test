@@ -1,0 +1,12 @@
+.GnomeViewContainer {
+  padding: 8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Thumbnail {
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -4,12 +4,12 @@ import { SearchGnomeState } from "./features/searchGnomes/searchGnomes.state";
 import { searchGnomeReducer } from "./features/searchGnomes";
 
 export interface ApplicationState {
-  gnomes: SearchGnomeState;
+  gnomeList: SearchGnomeState;
 }
 
 const configureStore = (): Store<ApplicationState> => {
   const rootReducer = combineReducers<ApplicationState>({
-    gnomes: searchGnomeReducer,
+    gnomeList: searchGnomeReducer,
   });
   return createStore(rootReducer, applyMiddleware(...[thunk]));
 };

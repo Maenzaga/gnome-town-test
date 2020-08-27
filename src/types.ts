@@ -1,7 +1,10 @@
 export type Gnome = {
   name: string;
   age: string;
-  weight: number;
-  height: number;
-  data: [];
+  weight: string;
+  height: string;
+  thumbnail: string;
+  hairColor: string;
+  professions: string[];
+  friends: string[];
 };
