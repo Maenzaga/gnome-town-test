@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { ApplicationState } from "../store";
 import { getGnomes } from "../features/searchGnomes";
 import { GnomeView } from "../components";
-import { Modal } from "@material-ui/core";
 
 export const GnomeListScreen = () => {
   const dispatch = useDispatch();
@@ -29,7 +28,7 @@ export const GnomeListScreen = () => {
             height={data.height}
             weight={data.weight}
             thumbnail={data.thumbnail}
-            hairColor={data.hairColor}
+            hair_color={data.hair_color}
             professions={data.professions}
             friends={data.friends}
           />

@@ -11,7 +11,7 @@ interface GnomeViewProps {
   weight: string;
   height: string;
   thumbnail: string;
-  hairColor: string;
+  hair_color: string;
   professions: string[];
   friends: string[];
 }
@@ -26,6 +26,7 @@ export const GnomeView = (props: GnomeViewProps) => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <div>
       <div className="GnomeViewContainer">

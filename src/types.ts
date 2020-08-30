@@ -4,7 +4,7 @@ export type Gnome = {
   weight: string;
   height: string;
   thumbnail: string;
-  hairColor: string;
+  hair_color: string;
   professions: string[];
   friends: string[];
 };

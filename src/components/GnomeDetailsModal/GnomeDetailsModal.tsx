@@ -42,16 +42,15 @@ export const GnomeDetailsModal = (props: GnomeDetailsModalProps) => {
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <span id="simple-modal-title">{`${props.gnome?.name} Info`}</span>
-      <br />
       <span id="simple-modal=description">
-        {`Age: ${props.gnome?.age}`} <br />
+        <br />
         {`Age: ${props.gnome?.age}`}
         <br />
         {`Weight: ${props.gnome?.weight}`}
         <br />
         {`Height: ${props.gnome?.height}`}
         <br />
-        {`Hair Color: ${props.gnome?.hairColor}`}
+        {`Hair Color: ${props.gnome?.hair_color}`}
         <br />
         {`Profession/s: ${props.gnome?.professions}`}
         <br />
